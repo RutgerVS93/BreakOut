@@ -13,7 +13,7 @@ public class PaddleMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
 	}
 	
-	void Update ()
+	void FixedUpdate ()
     {
         Movement();
 	}
