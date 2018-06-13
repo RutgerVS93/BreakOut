@@ -123,7 +123,6 @@ GameObject:
   - component: {fileID: 1170934}
   - component: {fileID: 1170933}
   - component: {fileID: 1170932}
-  - component: {fileID: 1170931}
   m_Layer: 0
   m_Name: Wall (1)
   m_TagString: Wall
@@ -131,26 +130,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &1170931
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170930}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &1170932
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,8 +138,8 @@ BoxCollider2D:
   m_GameObject: {fileID: 1170930}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 261e6d2ea312c154eb280a21fccb017d, type: 2}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -246,14 +225,14 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308489652}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -268,7 +247,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -285,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640c0fd722069534ba965f539434245b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -30
+  speed: 100
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +351,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4380507221900904, guid: b96c0a935928f9c48931cf4b20a88aa0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 4380507221900904, guid: b96c0a935928f9c48931cf4b20a88aa0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -401,12 +380,12 @@ Prefab:
     - target: {fileID: 61810506119145196, guid: b96c0a935928f9c48931cf4b20a88aa0,
         type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50777781002648432, guid: b96c0a935928f9c48931cf4b20a88aa0,
         type: 2}
       propertyPath: m_Constraints
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1200261329914590, guid: b96c0a935928f9c48931cf4b20a88aa0, type: 2}
       propertyPath: m_TagString
@@ -415,7 +394,22 @@ Prefab:
     - target: {fileID: 114284634620790006, guid: b96c0a935928f9c48931cf4b20a88aa0,
         type: 2}
       propertyPath: speed
-      value: 20
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 50777781002648432, guid: b96c0a935928f9c48931cf4b20a88aa0,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50777781002648432, guid: b96c0a935928f9c48931cf4b20a88aa0,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61810506119145196, guid: b96c0a935928f9c48931cf4b20a88aa0,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b96c0a935928f9c48931cf4b20a88aa0, type: 2}
@@ -430,7 +424,6 @@ GameObject:
   - component: {fileID: 1138910832}
   - component: {fileID: 1138910831}
   - component: {fileID: 1138910834}
-  - component: {fileID: 1138910833}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
@@ -496,26 +489,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1138910833
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1138910830}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &1138910834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -524,8 +497,8 @@ BoxCollider2D:
   m_GameObject: {fileID: 1138910830}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 261e6d2ea312c154eb280a21fccb017d, type: 2}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -621,7 +594,6 @@ GameObject:
   - component: {fileID: 1544424489}
   - component: {fileID: 1544424488}
   - component: {fileID: 1544424487}
-  - component: {fileID: 1544424486}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Wall
@@ -629,26 +601,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &1544424486
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1544424485}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &1544424487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -657,8 +609,8 @@ BoxCollider2D:
   m_GameObject: {fileID: 1544424485}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 261e6d2ea312c154eb280a21fccb017d, type: 2}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
